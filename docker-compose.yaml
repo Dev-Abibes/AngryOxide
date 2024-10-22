@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  angryoxide:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: angryoxide
+    ports:
+      - "8080:8080"  # Remplacez par le port approprié si nécessaire
+    volumes:
+      - .:/app
+    environment:
+      - RUST_BACKTRACE=1
